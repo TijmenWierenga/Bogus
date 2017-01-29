@@ -1,0 +1,25 @@
+{
+    "name": "tijmenwierenga/bogus",
+    "description": "The dummy data factory",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tijmen Wierenga",
+            "email": "tijmen@devmob.com"
+        }
+    ],
+    "require": {
+        "doctrine/collections": "^1.4",
+        "fzaninotto/faker": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {"TijmenWierenga\\Bogus\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"TijmenWierenga\\Bogus\\Tests\\": "tests/"}
+    }
+}
