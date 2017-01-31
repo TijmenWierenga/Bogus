@@ -28,6 +28,10 @@ class Fixtures implements FixturesInterface
         $this->factory = $factory;
     }
 
+    /**
+     * @param string $entityClassName
+     * @return Collection
+     */
     public function create(string $entityClassName): Collection
     {
         $collection = $this->factory->build($entityClassName);
