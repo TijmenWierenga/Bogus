@@ -2,6 +2,9 @@
 namespace TijmenWierenga\Bogus\Config;
 
 
+use Assert\Assert;
+use Assert\Assertion;
+
 class ConfigFile
 {
     /**
@@ -16,6 +19,7 @@ class ConfigFile
     public function __construct(string $path)
     {
         $this->path = $path;
+        Assertion::file($path);
     }
 
     /**
