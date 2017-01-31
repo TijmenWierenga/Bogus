@@ -1,5 +1,5 @@
 <?php
-namespace TijmenWierenga\Bogus;
+namespace TijmenWierenga\Bogus\Exception;
 
 
 use MongoDB\Driver\Exception\Exception;
