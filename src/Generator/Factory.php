@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Generator;
 
-
 use TijmenWierenga\Bogus\Collection\Collection;
 
 /**

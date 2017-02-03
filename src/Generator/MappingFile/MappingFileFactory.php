@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Generator\MappingFile;
 
-
 use Assert\Assertion;
 use Assert\InvalidArgumentException;
 use TijmenWierenga\Bogus\Collection\BogusCollection;
@@ -54,13 +53,10 @@ class MappingFileFactory implements Factory
      */
     private function getHandler(string $entityClassName): string
     {
-        try
-        {
+        try {
             $handler = $this->bindings->get($entityClassName);
             Assertion::notNull($handler);
-        }
-        catch (InvalidArgumentException $e)
-        {
+        } catch (InvalidArgumentException $e) {
             throw new BogusInvalidArgumentException("No handler was registered for class '{$entityClassName}'");
         }
 

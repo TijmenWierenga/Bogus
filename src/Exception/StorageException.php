@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Exception;
 
-
 use MongoDB\Driver\Exception\Exception;
 use RuntimeException;
 

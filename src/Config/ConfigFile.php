@@ -1,8 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Config;
 
-
-use Assert\Assert;
 use Assert\Assertion;
 
 class ConfigFile

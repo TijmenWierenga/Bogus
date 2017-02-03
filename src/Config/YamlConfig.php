@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Config;
 
-
 use Symfony\Component\Yaml\Yaml;
 use TijmenWierenga\Bogus\Exception\InvalidArgumentException;
 
