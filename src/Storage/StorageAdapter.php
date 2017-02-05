@@ -3,7 +3,7 @@ namespace TijmenWierenga\Bogus\Storage;
 
 
 use TijmenWierenga\Bogus\Collection\Collection;
-use TijmenWierenga\Bogus\StorageException;
+use TijmenWierenga\Bogus\Exception\StorageException;
 
 /**
  * Interface StorageAdapter
