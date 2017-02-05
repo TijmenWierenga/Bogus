@@ -16,14 +16,9 @@ use TijmenWierenga\Bogus\Generator\Factory;
 class MappingFileFactory implements Factory
 {
     /**
-     * The key where the bindings are registered
+     * @var Config
      */
-    const MAPPING_CONFIG_KEY = 'mappingFile';
-
-    /**
-     * @var BogusCollection
-     */
-    private $bindings;
+    private $config;
 
     /**
      * MappingFileFactory constructor.
@@ -31,7 +26,7 @@ class MappingFileFactory implements Factory
      */
     public function __construct(Config $config)
     {
-        $this->bindings = new BogusCollection($config->get(self::MAPPING_CONFIG_KEY));
+        $this->config = $config;
     }
 
     /**
@@ -54,7 +49,7 @@ class MappingFileFactory implements Factory
     private function getHandler(string $entityClassName): string
     {
         try {
-            $handler = $this->bindings->get($entityClassName);
+            $handler = $this->config->get("{$entityClassName}.mapping");
             Assertion::notNull($handler);
         } catch (InvalidArgumentException $e) {
             throw new BogusInvalidArgumentException("No handler was registered for class '{$entityClassName}'");

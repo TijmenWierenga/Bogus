@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c10a544e-9dbb-43b6-8653-d6b12fd5d873" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bogus.iml" afterPath="$PROJECT_DIR$/.idea/bogus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Collection/BogusCollection.php" afterPath="$PROJECT_DIR$/src/Collection/BogusCollection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Collection/Collection.php" afterPath="$PROJECT_DIR$/src/Collection/Collection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config/Config.php" afterPath="$PROJECT_DIR$/src/Config/Config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config/ConfigFile.php" afterPath="$PROJECT_DIR$/src/Config/ConfigFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config/YamlConfig.php" afterPath="$PROJECT_DIR$/src/Config/YamlConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Exception/InvalidArgumentException.php" afterPath="$PROJECT_DIR$/src/Exception/InvalidArgumentException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Exception/StorageException.php" afterPath="$PROJECT_DIR$/src/Exception/StorageException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fixtures.php" afterPath="$PROJECT_DIR$/src/Fixtures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FixturesInterface.php" afterPath="$PROJECT_DIR$/src/FixturesInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Generator/Factory.php" afterPath="$PROJECT_DIR$/src/Generator/Factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Generator/MappingFile/Mappable.php" afterPath="$PROJECT_DIR$/src/Generator/MappingFile/Mappable.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Container/Container.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php" afterPath="$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Storage/LogStorageAdapter.php" afterPath="$PROJECT_DIR$/src/Storage/LogStorageAdapter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Storage/StorageAdapter.php" afterPath="$PROJECT_DIR$/src/Storage/StorageAdapter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Storage/Repository/RepositoryStorage.php" afterPath="$PROJECT_DIR$/src/Storage/Repository/RepositoryStorage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php" afterPath="$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Storage/RepositoryStorageTest.php" afterPath="$PROJECT_DIR$/tests/Storage/RepositoryStorageTest.php" />
     </list>
     <ignored path="bogus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +33,8 @@
       <file leaf-file-name="RepositoryStorage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Storage/Repository/RepositoryStorage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1426">
-              <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+            <state relative-caret-position="558">
+              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
               <folding>
                 <element signature="e#59#73#0#PHP" expanded="true" />
               </folding>
@@ -53,11 +45,21 @@
       <file leaf-file-name="RepositoryStorageTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Storage/RepositoryStorageTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1984">
-              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+            <state relative-caret-position="124">
+              <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
               <folding>
-                <element signature="e#76#107#0#PHP" expanded="true" />
+                <element signature="e#76#117#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,8 +67,32 @@
       <file leaf-file-name="MappingFileFactoryTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="657">
+              <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+              <folding>
+                <element signature="e#56#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContainerTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Container/ContainerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459">
+              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+              <folding>
+                <element signature="e#56#80#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContainerConfig.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Container/ContainerConfig.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -75,70 +101,8 @@
       <file leaf-file-name="MappingFileFactory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1612">
-              <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mappable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Generator/MappingFile/Mappable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageException.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Exception/StorageException.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#50#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Container.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Container/Container.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestConfig.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Config/TestConfig.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FixturesInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FixturesInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fixtures.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fixtures.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="310">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -177,15 +141,17 @@
         <option value="$PROJECT_DIR$/src/Config/YamlConfig.php" />
         <option value="$PROJECT_DIR$/tests/Config/TestConfig.yml" />
         <option value="$PROJECT_DIR$/tests/Config/YamlConfigTest.php" />
-        <option value="$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php" />
         <option value="$PROJECT_DIR$/src/Generator/MappingFile/Mappable.php" />
-        <option value="$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php" />
         <option value="$PROJECT_DIR$/src/Storage/StorageAdapter.php" />
         <option value="$PROJECT_DIR$/src/Storage/RepositoryStorage.php" />
         <option value="$PROJECT_DIR$/src/Container/Container.php" />
         <option value="$PROJECT_DIR$/src/Exception/StorageException.php" />
+        <option value="$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php" />
+        <option value="$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php" />
+        <option value="$PROJECT_DIR$/tests/Container/ContainerConfig.yml" />
         <option value="$PROJECT_DIR$/src/Storage/Repository/RepositoryStorage.php" />
         <option value="$PROJECT_DIR$/tests/Storage/RepositoryStorageTest.php" />
+        <option value="$PROJECT_DIR$/tests/Container/ContainerTest.php" />
       </list>
     </option>
   </component>
@@ -328,6 +294,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Container" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bogus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bogus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -343,122 +327,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Storage" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Storage" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Repository" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MappingFile" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exception" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bogus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Container" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,18 +425,18 @@
       <updated>1485706719423</updated>
       <workItem from="1485706721064" duration="306000" />
       <workItem from="1485707099528" duration="20538000" />
-      <workItem from="1486315315082" duration="6000" />
+      <workItem from="1486315315082" duration="3050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20850000" />
+    <option name="totallyTimeSpent" value="23894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="950" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -622,7 +490,7 @@
         <state relative-caret-position="1984">
           <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
           <folding>
-            <element signature="e#76#107#0#PHP" expanded="true" />
+            <element signature="e#76#117#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -631,7 +499,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#56#87#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -711,6 +581,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -755,14 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Generator/Factory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
@@ -795,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/FixturesTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -816,6 +672,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="2254" column="27" selection-start-line="2254" selection-start-column="27" selection-end-line="2254" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -823,14 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Config/YamlConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -888,16 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Storage/Repository/RepositoryStorage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding>
-            <element signature="e#59#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Fixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="992">
@@ -922,29 +761,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1612">
-          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="713">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php">
+    <entry file="file://$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Factory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Storage/RepositoryStorageTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1984">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-          <folding>
-            <element signature="e#76#107#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,6 +782,78 @@
         <state relative-caret-position="186">
           <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Generator/Factory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/YamlConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Generator/MappingFileFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+          <folding>
+            <element signature="e#56#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Generator/MappingFile/MappingFileFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Storage/Repository/RepositoryStorage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+          <folding>
+            <element signature="e#59#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Container/ContainerConfig.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Storage/RepositoryStorageTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+          <folding>
+            <element signature="e#76#117#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Container/ContainerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="e#56#80#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

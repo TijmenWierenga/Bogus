@@ -3,16 +3,16 @@ namespace TijmenWierenga\Bogus\Storage\Repository;
 
 
 use Exception;
+use Interop\Container\ContainerInterface;
 use TijmenWierenga\Bogus\Collection\Collection;
 use TijmenWierenga\Bogus\Config\Config;
-use TijmenWierenga\Bogus\Container\Container;
 use TijmenWierenga\Bogus\Exception\StorageException;
 use TijmenWierenga\Bogus\Storage\StorageAdapter;
 
 class RepositoryStorage implements StorageAdapter
 {
     /**
-     * @var Container
+     * @var ContainerInterface
      */
     private $container;
 
@@ -23,10 +23,10 @@ class RepositoryStorage implements StorageAdapter
 
     /**
      * RepositoryStorage constructor.
-     * @param Container $container
+     * @param ContainerInterface $container
      * @param Config $config
      */
-    public function __construct(Container $container, Config $config)
+    public function __construct(ContainerInterface $container, Config $config)
     {
         $this->container = $container;
         $this->config = $config;
@@ -39,10 +39,10 @@ class RepositoryStorage implements StorageAdapter
     {
         try {
             $className = get_class($collection->first());
-            $classConfig = $this->config->get($className);
+            $repoConfig = $this->config->get("{$className}.repository");
 
-            $repository = $this->container->get($classConfig['repository']);
-            $save = $classConfig['save'];
+            $repository = $this->container->get($repoConfig['class']);
+            $save = $repoConfig['method'];
 
             $repository->{$save}($collection);
         } catch (Exception $e) {

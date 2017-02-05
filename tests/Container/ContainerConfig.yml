@@ -1,0 +1,5 @@
+TijmenWierenga\Bogus\Tests\Container\User:
+    repository:
+        class: test.repository
+        method: save
+    mapping: TijmenWierenga\Bogus\Tests\Container\UserMapper

@@ -2,17 +2,17 @@
 namespace TijmenWierenga\Bogus\Tests\Storage\RepositoryStorageTest;
 
 
+use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_MockObject_MockObject;
 use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Config\Config;
-use TijmenWierenga\Bogus\Container\Container;
 use TijmenWierenga\Bogus\Storage\Repository\RepositoryStorage;
 
 class RepositoryStorageTest extends TestCase
 {
     /**
-     * @var Container|PHPUnit_Framework_MockObject_MockObject
+     * @var ContainerInterface|PHPUnit_Framework_MockObject_MockObject
      */
     private $container;
 
@@ -28,7 +28,7 @@ class RepositoryStorageTest extends TestCase
 
     public function setUp()
     {
-        $this->container = $this->getMockBuilder(Container::class)
+        $this->container = $this->getMockBuilder(ContainerInterface::class)
             ->disableOriginalConstructor()
             ->getMock();
         $this->config = $this->getMockBuilder(Config::class)
@@ -47,10 +47,10 @@ class RepositoryStorageTest extends TestCase
 
         $this->config->expects($this->once())
             ->method('get')
-            ->with(User::class)
+            ->with(User::class . ".repository")
             ->willReturn([
-                'repository' => UserRepository::class,
-                'save' => 'save'
+                'class' => UserRepository::class,
+                'method' => 'save'
             ]);
         $this->container->expects($this->once())
             ->method('get')

@@ -27,11 +27,6 @@ class MappingFileFactoryTest extends TestCase
         $this->config = $this->getMockBuilder(Config::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $this->config->expects($this->any())
-            ->method('get')
-            ->willReturn([
-                User::class => UserMapping::class
-            ]);
         $this->factory = new MappingFileFactory($this->config);
     }
 
@@ -40,6 +35,10 @@ class MappingFileFactoryTest extends TestCase
     */
     public function it_calls_the_build_method_on_the_mapping_file()
     {
+        $this->config->expects($this->once())
+            ->method('get')
+            ->willReturn(UserMapping::class);
+
         $result = $this->factory->build(User::class);
 
         $this->assertInstanceOf(Collection::class, $result);
@@ -51,6 +50,10 @@ class MappingFileFactoryTest extends TestCase
     */
     public function it_throws_an_exception_when_mapping_is_unregistered()
     {
+        $this->config->expects($this->once())
+            ->method('get')
+            ->willThrowException(new InvalidArgumentException());
+
     	$this->expectException(InvalidArgumentException::class);
 
         $this->factory->build(UnregisteredClass::class);
