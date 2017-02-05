@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus;
 
-
 use TijmenWierenga\Bogus\Generator\Factory;
 use TijmenWierenga\Bogus\Storage\StorageAdapter;
 use TijmenWierenga\Bogus\Collection\Collection;
