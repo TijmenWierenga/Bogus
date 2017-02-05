@@ -109,7 +109,7 @@ class UserRepository {
 }
 
 class UserMapper implements Mappable {
-    public function build(): Collection
+    public static function build(): Collection
     {
         return new BogusCollection([new User("TijmenWierenga")]);
     }

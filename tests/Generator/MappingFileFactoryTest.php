@@ -63,7 +63,7 @@ class MappingFileFactoryTest extends TestCase
 class User {}
 class UnregisteredClass {}
 class UserMapping implements Mappable {
-    public function build(): Collection
+    public static function build(): Collection
     {
         return new BogusCollection([new User()]);
     }

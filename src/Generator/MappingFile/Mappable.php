@@ -8,5 +8,5 @@ interface Mappable
     /**
      * @return Collection
      */
-    public function build(): Collection;
+    public static function build(): Collection;
 }
