@@ -39,7 +39,7 @@ class MappingFileFactoryTest extends TestCase
             ->method('get')
             ->willReturn(UserMapping::class);
 
-        $result = $this->factory->build(User::class);
+        $result = $this->factory->build(User::class, [], 1);
 
         $this->assertInstanceOf(Collection::class, $result);
         $this->assertContainsOnlyInstancesOf(User::class, $result);
@@ -56,7 +56,7 @@ class MappingFileFactoryTest extends TestCase
 
     	$this->expectException(InvalidArgumentException::class);
 
-        $this->factory->build(UnregisteredClass::class);
+        $this->factory->build(UnregisteredClass::class, [], 1);
     }
 }
 

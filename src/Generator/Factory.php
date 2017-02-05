@@ -13,7 +13,9 @@ interface Factory
      * Creates dummy entities
      *
      * @param string $entityClassName
+     * @param iterable $attributes
+     * @param int $amount
      * @return Collection
      */
-    public function build(string $entityClassName): Collection;
+    public function build(string $entityClassName, iterable $attributes, int $amount): Collection;
 }

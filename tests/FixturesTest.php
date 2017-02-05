@@ -40,7 +40,7 @@ class DummyModel {}
 
 class TestFactory implements Factory
 {
-    public function build(string $entityClassName): Collection
+    public function build(string $entityClassName, iterable $attributes, int $amount): Collection
     {
         return new BogusCollection([new $entityClassName]);
     }

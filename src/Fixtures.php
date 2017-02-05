@@ -29,11 +29,13 @@ class Fixtures implements FixturesInterface
 
     /**
      * @param string $entityClassName
+     * @param iterable $attributes
+     * @param int $amount
      * @return Collection
      */
-    public function create(string $entityClassName): Collection
+    public function create(string $entityClassName, iterable $attributes = [], int $amount = 1): Collection
     {
-        $collection = $this->factory->build($entityClassName);
+        $collection = $this->factory->build($entityClassName, $attributes, $amount);
         $this->storageAdapter->save($collection);
 
         return $collection;

@@ -3,7 +3,6 @@ namespace TijmenWierenga\Bogus\Generator\MappingFile;
 
 use Assert\Assertion;
 use Assert\InvalidArgumentException;
-use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Collection\Collection;
 use TijmenWierenga\Bogus\Config\Config;
 use TijmenWierenga\Bogus\Exception\InvalidArgumentException as BogusInvalidArgumentException;
@@ -31,12 +30,13 @@ class MappingFileFactory implements Factory
 
     /**
      * @param string $entityClassName
-     * @param string $methodName
+     * @param iterable $attributes
+     * @param int $amount
      * @return Collection
      */
-    public function build(string $entityClassName, string $methodName = 'build'): Collection
+    public function build(string $entityClassName, iterable $attributes, int $amount): Collection
     {
-        $callable = [$this->getHandler($entityClassName), $methodName];
+        $callable = [$this->getHandler($entityClassName), 'build'];
         Assertion::isCallable($callable);
 
         return call_user_func($callable);

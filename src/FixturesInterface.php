@@ -13,7 +13,9 @@ interface FixturesInterface
      * Creates a new entity
      *
      * @param string $entityClassName
-     * @return Collection[$entityClassName]
+     * @param iterable $attributes
+     * @param int $amount
+     * @return Collection [$entityClassName]
      */
-    public function create(string $entityClassName): Collection;
+    public function create(string $entityClassName, iterable $attributes, int $amount): Collection;
 }
