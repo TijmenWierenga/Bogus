@@ -8,6 +8,8 @@ use PHPUnit_Framework_MockObject_MockObject;
 use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Config\Config;
 use TijmenWierenga\Bogus\Storage\Repository\RepositoryStorage;
+use TijmenWierenga\Bogus\Tests\User;
+use TijmenWierenga\Bogus\Tests\UserRepository;
 
 class RepositoryStorageTest extends TestCase
 {
@@ -43,7 +45,7 @@ class RepositoryStorageTest extends TestCase
     public function it_saves_a_collection_of_entities()
     {
         $userRepository = $this->getMockBuilder(UserRepository::class)->getMock();
-        $collection = new BogusCollection([new User()]);
+        $collection = new BogusCollection([new User('Tijmen')]);
 
         $this->config->expects($this->once())
             ->method('get')
@@ -60,14 +62,6 @@ class RepositoryStorageTest extends TestCase
             ->method('save')
             ->with($collection);
 
-    	$this->repositoryStorage->save($collection);
-    }
-}
-
-class User {};
-class UserRepository {
-    public function save(BogusCollection $collection)
-    {
-
+        $this->repositoryStorage->save($collection);
     }
 }

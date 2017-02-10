@@ -1,4 +1,4 @@
-TijmenWierenga\Bogus\Tests\Container\User:
+TijmenWierenga\Bogus\Tests\User:
     repository:
         class: test.repository
         method: save

@@ -1,9 +1,7 @@
 <?php
 namespace TijmenWierenga\Bogus\Tests\Container;
 
-
 use DI\ContainerBuilder;
-use Faker\Factory;
 use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
 use TijmenWierenga\Bogus\Collection\BogusCollection;
@@ -16,6 +14,7 @@ use TijmenWierenga\Bogus\Generator\MappingFile\MappingFileFactory;
 use TijmenWierenga\Bogus\Storage\Repository\RepositoryStorage;
 use function DI\object;
 use function DI\get;
+use TijmenWierenga\Bogus\Tests\User;
 
 class ContainerTest extends TestCase
 {
@@ -28,7 +27,7 @@ class ContainerTest extends TestCase
         $config = new YamlConfig(new ConfigFile(__DIR__ . '/ContainerConfig.yml'));
         $storage = new RepositoryStorage($container, $config);
         $generator = new MappingFileFactory($config);
-    	$fixtures = new Fixtures($storage, $generator);
+        $fixtures = new Fixtures($storage, $generator);
 
         /** @var User[]|Collection $users */
         $users = $fixtures->create(User::class);
@@ -37,6 +36,9 @@ class ContainerTest extends TestCase
         $this->assertEquals('TijmenWierenga', $users->first()->getName());
     }
 
+    /**
+     * @return ContainerInterface
+     */
     private function createTestContainer(): ContainerInterface
     {
         $builder = new ContainerBuilder();
@@ -48,38 +50,14 @@ class ContainerTest extends TestCase
     }
 }
 
-class User {
-    /**
-     * @var string
-     */
-    private $name;
-
-    /**
-     * User constructor.
-     * @param string $name
-     */
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
+class StorageMechanism
+{
+    public function persist(User $user) {}
+    public function flush() {}
 }
 
-class StorageMechanism {
-    public function persist(User $user)
-    {
-    }
-
-    public function flush()
-    {
-    }
-}
-
-class UserRepository {
+class UserRepository
+{
 
     /**
      * @var StorageMechanism
@@ -108,7 +86,8 @@ class UserRepository {
     }
 }
 
-class UserMapper implements Mappable {
+class UserMapper implements Mappable
+{
     public static function build(): Collection
     {
         return new BogusCollection([new User("TijmenWierenga")]);
