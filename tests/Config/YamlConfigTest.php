@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Tests\Config;
 
-
 use PHPUnit\Framework\TestCase;
 use TijmenWierenga\Bogus\Config\ConfigFile;
 use TijmenWierenga\Bogus\Config\YamlConfig;

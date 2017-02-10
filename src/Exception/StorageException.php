@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Exception;
 
-
 use Exception;
 use RuntimeException;
 

@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Storage\Repository;
 
-
 use Exception;
 use Interop\Container\ContainerInterface;
 use TijmenWierenga\Bogus\Collection\Collection;
