@@ -1,7 +1,6 @@
 <?php
 namespace TijmenWierenga\Bogus\Tests\Generator;
 
-
 use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_MockObject_MockObject;
 use TijmenWierenga\Bogus\Collection\BogusCollection;
