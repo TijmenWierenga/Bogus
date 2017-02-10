@@ -88,8 +88,8 @@ class UserRepository
 
 class UserMapper implements Mappable
 {
-    public static function build(): Collection
+    public static function build(iterable $attributes)
     {
-        return new BogusCollection([new User("TijmenWierenga")]);
+        return new User("TijmenWierenga");
     }
 }

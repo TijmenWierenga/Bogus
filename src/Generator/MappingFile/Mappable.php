@@ -1,12 +1,10 @@
 <?php
 namespace TijmenWierenga\Bogus\Generator\MappingFile;
 
-use TijmenWierenga\Bogus\Collection\Collection;
-
 interface Mappable
 {
     /**
-     * @return Collection
+     * @return Object
      */
-    public static function build(): Collection;
+    public static function build(iterable $attributes);
 }

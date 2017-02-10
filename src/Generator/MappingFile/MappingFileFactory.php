@@ -3,6 +3,7 @@ namespace TijmenWierenga\Bogus\Generator\MappingFile;
 
 use Assert\Assertion;
 use Assert\InvalidArgumentException;
+use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Collection\Collection;
 use TijmenWierenga\Bogus\Config\Config;
 use TijmenWierenga\Bogus\Exception\InvalidArgumentException as BogusInvalidArgumentException;
@@ -39,7 +40,16 @@ class MappingFileFactory implements Factory
         $callable = [$this->getHandler($entityClassName), 'build'];
         Assertion::isCallable($callable);
 
-        return call_user_func($callable);
+        $collection = new BogusCollection();
+
+        $i = 0;
+
+        while ($i++ < $amount)
+        {
+            $collection->add(call_user_func($callable, $attributes));
+        }
+
+        return $collection;
     }
 
     /**
