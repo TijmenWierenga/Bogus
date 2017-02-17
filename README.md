@@ -209,7 +209,7 @@ To solve this, we created a Symfony adapter. First update your configuration:
 YourApp\Model\User:                 
     mapping: YourApp\Mapping\UserMapper
     repository:
-        class: app.user.repository               # You can know just reference the repository service
+        class: app.user.repository               # You can now just reference the repository service
         method: saveMany                          
 ```
 
