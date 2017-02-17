@@ -101,3 +101,65 @@ $storageAdapter = new TijmenWierenga\Bogus\Storage\InMemoryStorageAdapter();
 $factory = // implementation of TijmenWierenga\Bogus\Generator\Factory interface
 $fixtures = new Fixtures($storageAdapter, $factory);
 ```
+
+### Generating random data
+The `Factory` interface is responsible for generating data models. You can of course write your
+own implementation, but I created a factory which makes it very easy to build data fixtures from scratch.
+
+#### The Mapping File Factory
+The Mapping File factory makes use of callables to generate dummy data. 
+To create a new Mapping file simply generate a class and extend it with the `AbstractMapper` class:
+
+``` php
+namespace YourApp\Mapping\UserMapper
+
+use TijmenWierenga\Bogus\Generator\MappingFile\AbstractMapper;
+use TijmenWierenga\Bogus\Generator\MappingFile\Mappable;
+
+class UserMapper extends AbstractMapper implements Mappable
+{
+    public static function attributes(): array
+    {
+        // Use Faker for generating dummy data
+        $generator = Faker\Generator::create();
+        
+        return [
+            'name' => $generator->firstName
+        ];
+    }
+
+    public static function create(array $attributes)
+    {
+        return new User($attributes['name']);
+    }
+}
+```
+
+The UserMapper generates attributes in the `attributes()` function, 
+they will be merged with the custom attributes you provided.
+The merged attributes are then passed to the `create()` method where they are applied to the model.
+
+##### Configuration
+Now the mapping class is created it needs to be bound to the model.
+This can be achieved through a configuration file. 
+The package comes with a YAML configuration file handler by default.
+A simple YAML configuration looks like this:
+
+``` yml
+YourApp\Model\User:                  # The full classname of your model
+    mapping: YourApp\Mapping\UserMapper     # The full classname of the mapping class
+```
+
+##### Applying the configuration file to the MappingFileFactory
+
+``` php
+$configFile = new TijmenWierenga\Bogus\Config\ConfigFile(__DIR__ . '/location/of/mapping-config.yml);
+$config = new TijmenWierenga\Bogus\Config\YamlConfig($configFile);
+$factory = new TijmenWierenga\Bogus\Generator\MappingFile\MappingFileFactory($config);
+
+$storageAdapter = new InMemoryStorageAdapter();
+$fixtures = new Fixtures($storageAdapter, $factory);
+
+$user = $fixtures->create(YourApp\Model\User::class, ['name' => 'Tijmen']); // This will return you a new User with 'Tijmen' as a name
+```
+
