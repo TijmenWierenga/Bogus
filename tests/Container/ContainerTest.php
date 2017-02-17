@@ -4,7 +4,6 @@ namespace TijmenWierenga\Bogus\Tests\Container;
 use DI\ContainerBuilder;
 use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
-use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Collection\Collection;
 use TijmenWierenga\Bogus\Config\ConfigFile;
 use TijmenWierenga\Bogus\Config\YamlConfig;
