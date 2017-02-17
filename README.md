@@ -14,7 +14,7 @@ use the existing packages. Here is when I decided to create my own package.
 This package enables you to create dummy data fixtures with custom attributes, having them stored the way you want (or not store them at all)
 with one simple command:
 
-```
+``` php
 $fixtures->create(YourApp\Model\User::class);
 ```
 
