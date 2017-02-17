@@ -3,7 +3,6 @@ namespace TijmenWierenga\Bogus\Tests\Generator;
 
 use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_MockObject_MockObject;
-use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Collection\Collection;
 use TijmenWierenga\Bogus\Config\Config;
 use TijmenWierenga\Bogus\Exception\InvalidArgumentException;
@@ -44,6 +43,22 @@ class MappingFileFactoryTest extends TestCase
         $this->assertContainsOnlyInstancesOf(User::class, $result);
     }
 
+    /**
+     * @test
+     */
+    public function it_creates_multiple_fixtures()
+    {
+        $this->config->expects($this->once())
+            ->method('get')
+            ->willReturn(UserMapping::class);
+
+        $result = $this->factory->build(User::class, [], 3);
+
+        $this->assertInstanceOf(Collection::class, $result);
+        $this->assertContainsOnlyInstancesOf(User::class, $result);
+        $this->assertCount(3, $result);
+    }
+    
     /**
     * @test
     */
