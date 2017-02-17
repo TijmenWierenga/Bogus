@@ -3,8 +3,16 @@ namespace TijmenWierenga\Bogus\Storage;
 
 use TijmenWierenga\Bogus\Collection\Collection;
 
-class LogStorageAdapter implements StorageAdapter
+/**
+ * Class InMemoryStorageAdapter
+ *
+ * @author  Tijmen Wierenga <tijmen@devmob.com>
+ */
+class InMemoryStorageAdapter implements StorageAdapter
 {
+    /**
+     * @param Collection $collection
+     */
     public function save(Collection $collection): void
     {
         return;

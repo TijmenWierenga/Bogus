@@ -11,6 +11,7 @@ class Fixtures implements FixturesInterface
      * @var StorageAdapter
      */
     private $storageAdapter;
+
     /**
      * @var Factory
      */

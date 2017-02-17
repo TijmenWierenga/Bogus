@@ -7,7 +7,7 @@ use TijmenWierenga\Bogus\Collection\BogusCollection;
 use TijmenWierenga\Bogus\Collection\Collection;
 use TijmenWierenga\Bogus\Fixtures;
 use TijmenWierenga\Bogus\Generator\Factory;
-use TijmenWierenga\Bogus\Storage\LogStorageAdapter;
+use TijmenWierenga\Bogus\Storage\InMemoryStorageAdapter;
 
 class FixturesTest extends TestCase
 {
@@ -19,7 +19,7 @@ class FixturesTest extends TestCase
     public function setUp()
     {
         $this->fixtures = new Fixtures(
-            new LogStorageAdapter(),
+            new InMemoryStorageAdapter(),
             new TestFactory()
         );
     }
