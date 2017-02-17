@@ -163,3 +163,5 @@ $fixtures = new Fixtures($storageAdapter, $factory);
 $user = $fixtures->create(YourApp\Model\User::class, ['name' => 'Tijmen']); // This will return you a new User with 'Tijmen' as a name
 ```
 
+### Storing your newly generated fixtures
+To be continued
