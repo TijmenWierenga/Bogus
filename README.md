@@ -153,7 +153,7 @@ YourApp\Model\User:                  # The full classname of your model
 ##### Applying the configuration file to the MappingFileFactory
 
 ``` php
-$configFile = new TijmenWierenga\Bogus\Config\ConfigFile(__DIR__ . '/location/of/mapping-config.yml);
+$configFile = new TijmenWierenga\Bogus\Config\ConfigFile(__DIR__ . '/location/of/mapping-config.yml');
 $config = new TijmenWierenga\Bogus\Config\YamlConfig($configFile);
 $factory = new TijmenWierenga\Bogus\Generator\MappingFile\MappingFileFactory($config);
 
