@@ -44,8 +44,7 @@ class MappingFileFactory implements Factory
 
         $i = 0;
 
-        while ($i++ < $amount)
-        {
+        while ($i++ < $amount) {
             $collection->add(call_user_func($callable, $attributes));
         }
 
