@@ -160,7 +160,10 @@ $factory = new TijmenWierenga\Bogus\Generator\MappingFile\MappingFileFactory($co
 $storageAdapter = new InMemoryStorageAdapter();
 $fixtures = new Fixtures($storageAdapter, $factory);
 
-$user = $fixtures->create(YourApp\Model\User::class, ['name' => 'Tijmen']); // This will return you a new User with 'Tijmen' as a name
+$result = $fixtures->create(YourApp\Model\User::class, ['name' => 'Tijmen']); // This will return you a Collection.
+$user = $result->first(); // Since it will always return a collection you have to fetch the first result
+
+// You now have a User model with the name of Tijmen.
 ```
 
 ### Storing your newly generated fixtures
