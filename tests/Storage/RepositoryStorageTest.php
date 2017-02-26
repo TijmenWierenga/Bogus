@@ -1,5 +1,5 @@
 <?php
-namespace TijmenWierenga\Bogus\Tests\Storage\RepositoryStorageTest;
+namespace TijmenWierenga\Bogus\Tests\Storage;
 
 
 use Interop\Container\ContainerInterface;
