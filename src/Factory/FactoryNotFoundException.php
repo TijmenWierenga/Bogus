@@ -1,5 +1,5 @@
 <?php
-namespace TijmenWierenga\Bogus;
+namespace TijmenWierenga\Bogus\Factory;
 
 class FactoryNotFoundException extends \RuntimeException
 {
