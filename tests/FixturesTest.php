@@ -3,8 +3,8 @@ namespace TijmenWierenga\Bogus\Tests;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use TijmenWierenga\Bogus\Factory;
-use TijmenWierenga\Bogus\FactoryNotFoundException;
+use TijmenWierenga\Bogus\Factory\Factory;
+use TijmenWierenga\Bogus\Factory\FactoryNotFoundException;
 use TijmenWierenga\Bogus\Fixtures;
 
 class FixturesTest extends TestCase
@@ -34,14 +34,14 @@ class FixturesTest extends TestCase
             public $name = "Tijmen";
         };
 
-        $this->factory->expects($this->once())
+        $this->factory->expects($this->exactly(3))
             ->method("build")
-            ->with([], 1)
-            ->willReturn([$entity]);
+            ->with(["name" => "Tijmen"])
+            ->willReturn($entity);
 
-        $result = $this->fixtures->create("TijmenWierenga\\Entity\\Dummy", [], 1);
+        $result = $this->fixtures->create("TijmenWierenga\\Entity\\Dummy", ["name" => "Tijmen"], 3);
 
-        $this->assertEquals($result, [$entity]);
+        $this->assertEquals($result, [$entity, $entity, $entity]);
     }
 
     public function testItThrowsAFactoryNotFoundExceptionIfNoFactoryExistsForEntity()
