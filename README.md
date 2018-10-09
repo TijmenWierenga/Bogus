@@ -37,7 +37,7 @@ composer require tijmen-wierenga/bogus
 The `Fixtures` class contains a single method:
 
 ``` php
-class Fixtures
+final class Fixtures
 {
     public function create(string $entityClassName, iterable $attributes, int $amount): iterable;
 }
@@ -93,6 +93,14 @@ class User
         $this->email = $email;
     }
 }
+```
+
+Next, register the Factory to the Fixtures base class:
+``` php
+$fixtures = new Fixtures(new UserFactory());
+
+// Use it
+$fixtures->create(User::class); // Returns a random user instance
 ```
 
 View the full [example](examples/abstract-factory.php).

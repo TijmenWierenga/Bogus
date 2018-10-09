@@ -4,10 +4,7 @@ namespace TijmenWierenga\Bogus\Factory;
 
 abstract class AbstractFactory implements Factory
 {
-    /**
-     * @return object
-     */
-    public function build(iterable $attributes): object
+    public function build(array $attributes): object
     {
         $attributes = array_merge($this->attributes(), $attributes);
 
@@ -23,10 +20,10 @@ abstract class AbstractFactory implements Factory
      * An iterable list of key => value pairs with default values. The result of the merged attributes
      * is passed to the 'create' method.
      */
-    abstract protected function attributes(): iterable;
+    abstract protected function attributes(): array;
 
     /**
      * Creates the actual entity based on the merged attributes
      */
-    abstract protected function create(iterable $attributes): object;
+    abstract protected function create(array $attributes): object;
 }

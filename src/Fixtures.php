@@ -19,7 +19,7 @@ final class Fixtures
     /**
      * @return object[]|iterable
      */
-    public function create(string $entityClassName, iterable $attributes = [], int $amount = 1): iterable
+    public function create(string $entityClassName, array $attributes = [], int $amount = 1): iterable
     {
         $factory = $this->getFactoryFor($entityClassName);
         $result = [];

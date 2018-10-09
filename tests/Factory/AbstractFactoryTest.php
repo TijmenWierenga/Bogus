@@ -16,14 +16,14 @@ class AbstractFactoryTest extends TestCase
     {
         $this->factory = new class extends AbstractFactory {
 
-            protected function attributes(): iterable
+            protected function attributes(): array
             {
                 return [
                     "name" => "Tijmen"
                 ];
             }
 
-            protected function create(iterable $attributes): object
+            protected function create(array $attributes): object
             {
                 return new class($attributes["name"]) {
                     public $name;

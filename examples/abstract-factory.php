@@ -12,7 +12,7 @@ final class UserFactory extends AbstractFactory
         return $entityClassName === User::class;
     }
 
-    protected function attributes(): iterable
+    protected function attributes(): array
     {
         $factory = \Faker\Factory::create();
 
@@ -22,7 +22,7 @@ final class UserFactory extends AbstractFactory
         ];
     }
 
-    protected function create(iterable $attributes): object
+    protected function create(array $attributes): object
     {
         return new User($attributes["name"], $attributes["email"]);
     }
