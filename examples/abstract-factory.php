@@ -2,11 +2,10 @@
 namespace TijmenWierenga\Bogus\Example;
 
 use TijmenWierenga\Bogus\Factory\AbstractFactory;
-use TijmenWierenga\Bogus\Factory\Factory;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-final class UserFactory extends AbstractFactory implements Factory
+final class UserFactory extends AbstractFactory
 {
     public function creates(string $entityClassName): bool
     {

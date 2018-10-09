@@ -34,7 +34,7 @@ composer require tijmen-wierenga/bogus
 ```
 
 ## Usage
-The `Fixtures` class just contains a single method:
+The `Fixtures` class contains a single method:
 
 ``` php
 class Fixtures
@@ -45,4 +45,55 @@ class Fixtures
 
 This means you'll always call this method in order to generate fixtures. 
 The implementation is highly configurable.
+
+### Factories
+Random data is created through factories. The easiest way to implement a factory is by extending the AbstractFactory:
+
+``` php
+use TijmenWierenga\Bogus\Factory\AbstractFactory;
+
+final class UserFactory extends AbstractFactory
+{
+    /**
+     * Whether or not the Factory creates the entity passed as an argument
+     */
+    public function creates(string $entityClassName): bool
+    {
+        return $entityClassName === User::class;
+    }
+
+    /**
+     * An iterable list of key => value pairs with default values. The result of the merged attributes
+     * is passed to the 'create' method.
+     */
+    protected function attributes(): iterable
+    {
+        $factory = \Faker\Factory::create();
+
+        return [
+            "name" => $factory->firstName,
+            "email" => $factory->email
+        ];
+    }
+
+    /**
+     * Creates the actual entity based on the merged attributes
+     */
+    protected function create(iterable $attributes): object
+    {
+        return new User($attributes["name"], $attributes["email"]);
+    }
+}
+
+class User
+{
+    public function __construct(string $name, string $email)
+    {
+        $this->name = $name;
+        $this->email = $email;
+    }
+}
+```
+
+View the full [example](examples/abstract-factory.php).
 
