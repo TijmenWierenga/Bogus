@@ -1,7 +1,10 @@
 <?php
 namespace TijmenWierenga\Bogus;
 
-class Fixtures
+use TijmenWierenga\Bogus\Factory\Factory;
+use TijmenWierenga\Bogus\Factory\FactoryNotFoundException;
+
+final class Fixtures
 {
     /**
      * @var Factory[]
@@ -19,8 +22,13 @@ class Fixtures
     public function create(string $entityClassName, iterable $attributes = [], int $amount = 1): iterable
     {
         $factory = $this->getFactoryFor($entityClassName);
+        $result = [];
 
-        return $factory->build($attributes, $amount);
+        for ($i = 0; $i < $amount; $i++) {
+            $result[] = $factory->build($attributes);
+        }
+
+        return $result;
     }
 
     private function getFactoryFor(string $entityClassName): Factory
