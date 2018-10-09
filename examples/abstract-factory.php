@@ -58,4 +58,4 @@ class User
 }
 
 $fixtures = new \TijmenWierenga\Bogus\Fixtures(new UserFactory());
-var_dump($fixtures->create(User::class, [], 100)); // Array of 3 users
+var_dump($fixtures->create(User::class, [], 3)); // Array of 3 users
