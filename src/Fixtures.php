@@ -34,7 +34,9 @@ final class Fixtures
     private function getFactoryFor(string $entityClassName): Factory
     {
         foreach ($this->factories as $factory) {
-            if ($factory->creates($entityClassName)) return $factory;
+            if ($factory->creates($entityClassName)) {
+                return $factory;
+            }
         }
 
         throw FactoryNotFoundException::forEntity($entityClassName);
