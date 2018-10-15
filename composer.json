@@ -1,6 +1,7 @@
 {
     "name": "tijmen-wierenga/bogus",
     "description": "The dummy data factory",
+    "keywords": ["fixtures", "data-generator", "fake-data", "dummy-data"],
     "type": "library",
     "require": {
         "php": "^7.2"
