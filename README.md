@@ -105,3 +105,15 @@ $fixtures->create(User::class); // Returns a random user instance
 
 View the full [example](examples/abstract-factory.php).
 
+### Overriding properties
+If you wish to override a random property, you can provide a key-value list with overrides:
+```php
+$user = $fixtures->create(User::class, [
+    "name" => "Tijmen"
+]); // Will create a user with Tijmen as a name and a random email address
+```
+
+### Creating multiple entities at once
+```php
+$users = $fixtures->create(User::class, [], 3); // Will create 3 random users
+```
