@@ -8,3 +8,4 @@ install:
 script:
   - vendor/bin/phpunit
   - vendor/bin/phpstan analyze src --level=7
+  - vendor/bin/phpcs src tests --standard=psr2
