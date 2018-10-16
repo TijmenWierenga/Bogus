@@ -1,21 +1,14 @@
 # Bogus
 [![Build Status](https://travis-ci.org/TijmenWierenga/Bogus.svg?branch=master)](https://travis-ci.org/TijmenWierenga/Bogus)
 
-## Another package that generates dummy data models?
-There are lots of packages available for quickly generating the dummy data you need for your application,
-so why the need for another package doing the exact same thing?
+## A zero dependency library to quickly generate fake data
+Ever had to deal with the situation where you had to create dummy data to feed to a test? Newing up a lot of entities and passing the required arguments for all of them?
+Bogus can help you by creating a very simple factory for your entities. Every factory will give you the possibility to define default (random) and overridable attributes for your entities. 
 
-I encountered the limitations of these packages once my storage system got more complicated.
-Different storage engines, lots of repositories and advanced data models made it very difficult to
-use the existing packages. Here is when I decided to create my own package.
-
-**I'm currently upgrading the package to it's first major version and I'm unsure whether or not I'll continue to support storage. Extending the functionality with storage was complex and probably conflicts with the Single Responsibility Principle. I'll add my final decision to the release notes.**
-
-This package enables you to create dummy data fixtures with custom attributes, having them stored the way you want (or not store them at all)
-with one simple command:
-
-``` php
-$fixtures->create(YourApp\Model\User::class);
+It's as simple as:
+```php
+$fixtures = new Fixtures(new UserFactory());
+$users = $fixtures->create(User::class, ['city' => 'Amsterdam'], 5); // Generates 5 users from Amsterdam
 ```
 
 ## Installation
