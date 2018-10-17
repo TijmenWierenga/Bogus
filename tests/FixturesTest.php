@@ -41,7 +41,10 @@ class FixturesTest extends TestCase
 
         $result = $this->fixtures->create("TijmenWierenga\\Entity\\Dummy", ["name" => "Tijmen"], 3);
 
-        $this->assertEquals($result, [$entity, $entity, $entity]);
+        $this->assertCount(3, $result);
+        $this->assertEquals($entity, $result[0]);
+        $this->assertEquals($entity, $result[1]);
+        $this->assertEquals($entity, $result[2]);
     }
 
     public function testItThrowsAFactoryNotFoundExceptionIfNoFactoryExistsForEntity()
