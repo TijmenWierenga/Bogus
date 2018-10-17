@@ -1,7 +1,7 @@
 # Bogus
 [![Build Status](https://travis-ci.org/TijmenWierenga/Bogus.svg?branch=master)](https://travis-ci.org/TijmenWierenga/Bogus)
 
-## A zero dependency library to quickly generate fake data
+## A simple library to quickly generate fake data
 Ever had to deal with the situation where you had to create dummy data to feed to a test? Newing up a lot of entities and passing the required arguments for all of them?
 Bogus can help you by creating a very simple factory for your entities. Every factory will give you the possibility to define default (random) and overridable attributes for your entities. 
 
