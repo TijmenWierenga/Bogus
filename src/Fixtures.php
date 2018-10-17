@@ -1,6 +1,8 @@
 <?php
 namespace TijmenWierenga\Bogus;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use TijmenWierenga\Bogus\Factory\Factory;
 use TijmenWierenga\Bogus\Factory\FactoryNotFoundException;
 
@@ -17,15 +19,15 @@ final class Fixtures
     }
 
     /**
-     * @return object[]|iterable
+     * @return object[]|Collection
      */
-    public function create(string $entityClassName, array $attributes = [], int $amount = 1): iterable
+    public function create(string $entityClassName, array $attributes = [], int $amount = 1): Collection
     {
         $factory = $this->getFactoryFor($entityClassName);
-        $result = [];
+        $result = new ArrayCollection();
 
         for ($i = 0; $i < $amount; $i++) {
-            $result[] = $factory->build($attributes);
+            $result->add($factory->build($attributes));
         }
 
         return $result;

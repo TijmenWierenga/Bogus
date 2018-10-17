@@ -1,7 +1,7 @@
 # Bogus
 [![Build Status](https://travis-ci.org/TijmenWierenga/Bogus.svg?branch=master)](https://travis-ci.org/TijmenWierenga/Bogus)
 
-## A zero dependency library to quickly generate fake data
+## A simple library to quickly generate fake data
 Ever had to deal with the situation where you had to create dummy data to feed to a test? Newing up a lot of entities and passing the required arguments for all of them?
 Bogus can help you by creating a very simple factory for your entities. Every factory will give you the possibility to define default (random) and overridable attributes for your entities. 
 
@@ -32,7 +32,7 @@ The `Fixtures` class contains a single method:
 ``` php
 final class Fixtures
 {
-    public function create(string $entityClassName, iterable $attributes, int $amount): iterable;
+    public function create(string $entityClassName, iterable $attributes, int $amount): Collection;
 }
 ```
 
@@ -93,7 +93,7 @@ Next, register the Factory to the Fixtures base class:
 $fixtures = new Fixtures(new UserFactory());
 
 // Use it
-$fixtures->create(User::class); // Returns a random user instance
+$fixtures->create(User::class); // Returns a Collection with a random user instance
 ```
 
 View the full [example](examples/abstract-factory.php).
