@@ -32,7 +32,7 @@ The `Fixtures` class contains a single method:
 ``` php
 final class Fixtures
 {
-    public function create(string $entityClassName, iterable $attributes, int $amount): iterable;
+    public function create(string $entityClassName, iterable $attributes, int $amount): Collection;
 }
 ```
 
@@ -93,7 +93,7 @@ Next, register the Factory to the Fixtures base class:
 $fixtures = new Fixtures(new UserFactory());
 
 // Use it
-$fixtures->create(User::class); // Returns a random user instance
+$fixtures->create(User::class); // Returns a Collection with a random user instance
 ```
 
 View the full [example](examples/abstract-factory.php).
